@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+<title>A0M0RAJAB's CV</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Roboto", sans-serif
+    }
+</style>
+
+<body class="w3-light-grey">
+
+    <!-- Page Container -->
+    <div class="w3-content w3-margin-top" style="max-width:1400px;">
+        <!-- The Grid -->
+        <div class="w3-row-padding">
+
+            <!-- Left Column -->
+            <div class="w3-third">
+
+                <div class="w3-white w3-text-grey w3-card-4">
+                    <div class="w3-display-container">
+                        <img src="personal.png" style="width:100%" alt="Avatar">
+                        <div class="w3-display-bottomleft w3-container
+                                    w3-text-black">
+                            <h2 id=name></h2>
+                        </div>
+                    </div>
+                    <div class="w3-container">
+                        <p id="profession"><i class="fa fa-briefcase
+                                        fa-fw
+                                        w3-margin-right w3-large w3-text-teal"></i></p>
+                        <p id="location"><i class="fa fa-home fa-fw
+                                        w3-margin-right
+                                        w3-large w3-text-teal"></i></p>
+                        <p id="email"><i class="fa fa-envelope fa-fw
+                                        w3-margin-right w3-large w3-text-teal"></i></p>
+                        <!-- <p id="phone"><i class="fa fa-phone fa-fw w3-margin-right
+                                        w3-large w3-text-teal"></i></p> -->
+                        <p id="cvPDF"><i class="fa fa-file-text-o fa-fw
+                            w3-margin-right w3-large w3-text-teal"></i></p>
+                        <hr>
+
+                        <div id="skills_container">
+                            <p class="w3-large"><b><i class="fa
+                                                fa-asterisk
+                                                fa-fw w3-margin-right
+                                                w3-text-teal"></i>Skills</b></p>
+                        </div>
+
+                        <div id="language_container">
+                            <p class="w3-large w3-text-theme"><b><i
+                                                class="fa fa-globe fa-fw
+                                                w3-margin-right w3-text-teal"></i>Languages</b></p>
+                        </div>
+                        <div id="extra_container">
+                            <p class="w3-large w3-text-theme"><b><i
+                                                class="fa fa-cogs  fa-fw
+                                                w3-margin-right w3-text-teal"></i>Extracurricular</b></p>
+                        </div>
+                    </div>
+                </div><br>
+
+                <!-- End Left Column -->
+            </div>
+
+            <!-- Right Column -->
+            <div class="w3-twothird">
+                <!--  About me container -->
+                <div id="aboutMe_container" class="w3-container w3-card
+                            w3-white
+                            w3-margin-bottom">
+                    <h2 class="w3-text-grey w3-padding-16"><i class="fa
+                                    fa-lightbulb-o fa-fw w3-margin-right
+                                    w3-xxlarge
+                                    w3-text-teal"></i>About me</h2>
+                </div>
+
+                <!-- Work container -->
+                <div id="work_container" class="w3-container w3-card
+                            w3-white
+                            w3-margin-bottom">
+                    <h2 class="w3-text-grey w3-padding-16"><i class="fa
+                                    fa-suitcase fa-fw w3-margin-right w3-xxlarge
+                                    w3-text-teal"></i>Work/Project Experience</h2>
+                </div>
+                <!-- Education part -->
+                <div id="Education_container" class="w3-container
+                            w3-card w3-white">
+                    <h2 class="w3-text-grey w3-padding-16"><i class="fa
+                                    fa-graduation-cap fa-fw w3-margin-right
+                                    w3-xxlarge w3-text-teal"></i>Education</h2>
+                </div>
+
+
+                <!-- End Right Column -->
+            </div>
+
+            <!-- End Grid -->
+        </div>
+
+        <!-- End Page Container -->
+    </div>
+
+    <script>
+        let resume = {
+            name: "Abdurrahman RAJAB",
+            location: "Istanbul - Turkey",
+            emailBody: "rajab-2",
+            emailDomain: "windowslive",
+            emailExt: "com",
+            profession: "Computer Sceintist",
+            CvPDF: "https://a0m0rajab.github.io/resume.pdf",
+            aboutMe: "Highly motivated Computer engineering student in Turkey, willing to work help and try my best to solve wicked problems in the world even if it's hard I still believe that nothing is impossible" +
+                " Having a 7 years of various volunteering experience is one of my strongest points to work in a team, at the same time i have worked at a few technical projects with YGA and other companies or even at uni.<br>You can check some of my projects from the list down, its linked to them.",
+            langgauges: [
+                ["Arabic", "100"],
+                ["English", "90"],
+                ["Turkish", "90"],
+                ["Polish", "10"]
+            ],
+            skills: [
+                ["Programming", "100"],
+                ["Python", "70"],
+                ["Java", "80"],
+                ["Creative thinking", "100"],
+                ["HTML5", "70"],
+                ["JS", "70"],
+            ],
+            socialMediaList: [
+                ["facebook-official", "facebook.com/a0m0rajab"],
+                ["instagram", "instagram.com/a0m0rajab/"],
+                // ["snapchat"],
+                ["pinterest", "pinterest.com/a0m0rajab/"],
+                ["twitter", "twitter.com/rajab_2"],
+                ["linkedin", "linkedin.com/in/a0m0rajab/"],
+
+            ],
+            educationalInformation: [
+                ["Fatih Sultan Mehmet University", "2015- 2020", "A four years programme.<br>Taken courses:Programming with java,programming with Labview and Innovation.<br>Received A’s in all of the above."],
+                ["Bialystok University of Technology", "2018- 2019", "An Erasmus student in the second semester of the third year of studying, with the highest score in all classes and 4/4 GPA"],
+
+            ],
+            workInfo: [
+                ["Sima technology", "Summer of 2016- 2017 - three months", "Working with middle and high school student to teach them programming and STEM by using LEGO mindStorm kit.<br>Building and designing Curriculum of lego programming education for children "],
+                [createLink("https://a0m0rajab.github.io/exercise/JSuniWork/ChatBot.html", "ChatBot — WitAi"), , "A Web ChatBot developed by using witAI for<br>* University class that answer basic question<br>* YGA project that help blind people to connect with WeWalk- ongoing"],
+                [createLink("https://a0m0rajab.github.io/Automata/turing/abdurrahmanRajab_turingMachineSimulator.html", "Turing simulation — Web"), , "Turing machine Simulator on web that solve specific formula."],
+                [createLink("https://a0m0rajab.github.io/VizeUygulamalari/", "Visa application — Turkish Government"), , "A webSite developed based on government site that show visa application for turkish people in elegant way, one of few other suggestions to government"],
+
+            ],
+            extra: [
+                ["Young guru academy", "Volunteer", "100 person chosen out of 50 000 to social innovative leadership programme that aim to get double winged leaders."],
+                ["Fatih scout Boy", "Volunteer", "Scout leader of 100 scout member, giving tips and technical activities based on CSunplugged and MIT media lab lifelong kindergarten groups’  notes."]
+            ]
+
+        }
+
+        createPageObj(resume);
+
+
+        // Create educational card.
+        function infoCard(where, period, information) {
+            let container = createElement("div", "w3-container");
+            if (where !== undefined) {
+                let place = createElement("h5", "w3-opacity", "<b>" + where + "</b>");
+                container.appendChild(place)
+            }
+            if (period !== undefined) {
+                let date = createElement("h6", "w3-text-teal", createDateIcon().outerHTML + " " + period);
+                container.appendChild(date)
+            }
+
+
+            let description = createElement("p", undefined, information);
+            container.appendChild(description)
+            let hr = createElement("hr")
+            container.appendChild(hr)
+            return container;
+        }
+        // create card, its dublicated from the one before and need to change but lazy to think about it now though.
+        function createExtraCard(where, period, information) {
+            let container = createElement("div", "w3-container");
+            if (where !== undefined) {
+                let place = createElement("p", "w3-opacity", "<b>" + where + "</b>");
+                container.appendChild(place)
+            }
+            if (period !== undefined) {
+                let date = createElement("h6", "w3-text-teal", createPosIcon().outerHTML + " " + period);
+                container.appendChild(date)
+            }
+
+
+            let description = createElement("p", undefined, information);
+            container.appendChild(description)
+            let hr = createElement("hr")
+            container.appendChild(hr)
+            return container;
+        }
+        // also duplicated need to change and modify -- refactor
+        function createExtra(containerID, cardsInformaion) {
+            let eduCard = document.getElementById(containerID);
+            cardsInformaion.forEach(e => {
+                eduCard.appendChild(createExtraCard(e[0], e[1], e[2]));
+
+            })
+        }
+        // create date icon for educational card.
+        function createDateIcon() {
+            return createElement("i", ["fa", "fa-calendar", "fa-fw", "w3-margin-right"]);
+        }
+        // site map :: Example of sitemap fa-sitemap to write as a position
+        function createPosIcon() {
+            return createElement("i", ["fa", "fa-sitemap", "fa-fw", "w3-margin-right"]);
+
+        }
+        // general use.
+        function createElement(type, classes, text) {
+            let elem = document.createElement(String(type));
+            if (classes !== undefined) {
+                if (Array.isArray(classes)) {
+                    classes.forEach(e => {
+                        elem.classList.add(e)
+                    })
+                }
+                elem.classList.add(classes)
+
+            }
+            if (text !== undefined) {
+                elem.innerHTML = text
+
+            }
+            return elem;
+
+        }
+        // create footer to add the icons in.
+        function createFooter(classes, text) {
+            return createElement("footer", classes, text);
+        }
+
+        function createParagraph(text) {
+            return createElement("p", undefined, text);
+        }
+
+        //https://www.w3schools.com/icons/fontawesome_icons_brand.asp Icons list.
+        function createIcons(socialMedia) {
+            let ic = createElement("i", ["fa", "fa-" + socialMedia, "w3-hover-opacity"], " ");
+            return ic;
+        }
+        // anchor with link for specific use in social meida
+        function createAnchor(link, socialMedia) {
+            let anch = createElement("a");
+            anch.appendChild(createIcons(socialMedia))
+            anch.href = `https://` + link;
+            return anch
+        }
+
+        function createLink(link, text) {
+            return `<a href=\"` + link + `" target=\"_blank\">` + text + `</a>`
+        }
+
+
+        // warpper to add footer in the webpage
+        function addFooter(socialMediaList) {
+            let footer = createFooter(["w3-container", "w3-teal", "w3-center", "w3-margin-top"]);
+            if (socialMediaList !== undefined) {
+                footer.appendChild(createParagraph("Find me on social media."));
+                socialMediaList.forEach(e => {
+                    footer.appendChild(createAnchor(e[1], e[0]));
+                    // footer.appendChild(null);
+                    footer.innerHTML += " "
+                })
+            }
+            footer.appendChild(createParagraph("Powered by <a href=\"https: //www.w3schools.com/w3css/default.asp\" target=\"_blank\">w3.css</a>"))
+            let body = document.body;
+            body.appendChild(footer);
+        }
+
+        // Append the education card to education container for adding the whole information using it.
+        function appendCards(containerID, cardsInformaion) {
+            cardsInformaion.forEach(e => {
+                appendCard(containerID, e);
+            })
+
+        }
+
+        function appendCard(containerID, cardsInformaion) {
+            let eduCard = document.getElementById(containerID);
+
+            if (Array.isArray(cardsInformaion))
+                eduCard.appendChild(infoCard(cardsInformaion[0], cardsInformaion[1], cardsInformaion[2]));
+            else
+                eduCard.appendChild(infoCard(cardsInformaion));
+
+        }
+
+        function appendExtraCard(containerID, cardsInformaion) {
+            let eduCard = document.getElementById(containerID);
+
+            if (Array.isArray(cardsInformaion))
+                eduCard.appendChild(infoCard(cardsInformaion[0], cardsInformaion[1], cardsInformaion[2]));
+            else
+                eduCard.appendChild(infoCard(cardsInformaion));
+
+        }
+        // <p>Adobe Photoshop</p>
+        //                     <div class="">
+        //                         <div class="" style="width:90%">90%</div>
+        //                     </div>
+        function appendBars(containerID, barInfo, show) {
+            let container = document.getElementById(containerID);
+            barInfo.forEach(e => {
+
+                let p = createElement("p", undefined, e[0])
+                let bar = createElement("div", ["w3-light-grey", "w3-round-xlarge", "w3-small"]);
+
+                let colouredBar = createElement("div", ["w3-container", "w3-center", "w3-round-xlarge", "w3-teal"], e[1]);
+                colouredBar.style = "width:" + e[1] + "%";
+                // to check and show the nubmer in the bar.
+                if (show == 1) {}
+                bar.appendChild(colouredBar);
+                container.appendChild(p)
+                container.appendChild(bar)
+            })
+            container.appendChild(createElement("br"))
+
+        }
+
+        function setElementText(id, text) {
+            document.getElementById(id).innerHTML += text
+        }
+
+        function setName(text) {
+            setElementText("name", text);
+        }
+
+        function setProfession(text) {
+            setElementText("profession", text);
+        }
+
+        function setLocation(text) {
+            setElementText("location", text);
+        }
+
+        function setEmail(body, domain, ext) {
+            let text = body + "<code>&#64;<\code>" + domain + "." + ext;
+            setElementText("email", `<a href="mailto:` + text + `">` + text + `</a>
+`);
+
+        }
+
+        function setPhoneNumber(text) {
+            setElementText("phone", text)
+        }
+
+        function setPersonalInformation(name, location, emailBody, emailDomain, emailExt, profession) {
+            setProfession(profession);
+            setName(name);
+            setLocation(location)
+            setEmail(emailBody, emailDomain, emailExt);
+        }
+
+
+        function createPage(name, location, emailBody, emailDomain, emailExt, profession, socialMediaList, educationalInformation, worksInformation, skills, language, aboutMe) {
+            setPersonalInformation(name, location, emailBody, emailDomain, emailExt, profession);
+            addFooter(socialMediaList);
+            appendCards("work_container", worksInformation);
+            appendCards("Education_container", educationalInformation);
+            appendCard("aboutMe_container", aboutMe);
+            appendBars("skills_container", skills);
+            appendBars("language_container", language);
+        }
+
+        function setCVpdf(text) {
+            setElementText("cvPDF", `<a href="` + text + `">PDF version to download</a>`);
+        }
+
+        function createPageObj(object) {
+            createPage(object.name,
+                object.location,
+                object.emailBody,
+                object.emailDomain,
+                object.emailExt,
+                object.profession,
+                object.socialMediaList,
+                object.educationalInformation,
+                object.workInfo,
+                object.skills,
+                object.langgauges,
+                object.aboutMe);
+            setCVpdf(object.CvPDF);
+            createExtra("extra_container", object.extra);
+
+
+
+        }
+    </script>
+    </body
