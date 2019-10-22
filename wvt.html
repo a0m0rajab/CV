@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+
+<body>
+    power of 2: <input type="text">
+    <br> Random Max: <input type="text">
+
+    <br>
+
+    <input type="button" value="craete" onclick="createTable(4)">
+    <input type="button" value="step" onclick="stepping()">
+    <input type="button" value="calculate">
+    <input type="button" value="run">
+    <hr>
+    <div id=content>
+        <table class=" w3-table-all w3-centered w3-table w3-border" id=data></table>
+        <hr>
+        <table id=visualSum></table>
+        <p id=report></p>
+    </div>
+</body>
+<script>
+    this.col = 0;
+    this.row = 0;
+    this.steps = 0;
+    this.resultArray = []
+    this.toUpdate = 0;
+
+    function stepping() {
+        if (steps == 0) {
+            tableSetBorder(this.toUpdate);
+            report.innerText = getRowReport(this.steps)
+            this.toUpdate++;
+            this.steps++;
+        } else {
+            updateTableRow(this.toUpdate - 1);
+            this.steps = 0;
+        }
+
+
+
+    }
+
+    function updateTableRow(num) {
+        let table = document.getElementById("data");
+        let tds = table.getElementsByTagName("tr")[num].getElementsByTagName("td")
+        for (let i = 0; i < tds.length; i++) {
+            tds[i].innerText = this.resultArray[i]
+
+        }
+    }
+
+    function average(a, b) {
+        a = Number(a), b = Number(b)
+        return (a + b) / 2
+    }
+
+    function difference(a, b) {
+        a = Number(a), b = Number(b)
+
+        return (a - b) / 2
+    }
+
+    function aveText(a, b) {
+        return "(" + a + "+" + b + "b)/2= "
+    }
+
+    function diffText(a, b) {
+        return "(" + a + "-" + b + ")/2= "
+    }
+
+    function resultArray() {
+        this.resultArray = [];
+
+    }
+    // counted as 4
+    function getRowReport(row) {
+        this.resultArray = []
+        let table = document.getElementById("data");
+        let trs = table.getElementsByTagName("tr")[row].getElementsByTagName("td")[col];
+        let loopCount = table.getElementsByTagName("tr")[row].getElementsByTagName("td").length
+        let avg, diffs;
+        text = ""
+        for (let i = 0; i < loopCount / 2; i++) {
+            avg = average(getCellText(i * 2), getCellText(i * 2 + 1));
+            diffs = difference(getCellText(i * 2), getCellText(i * 2 + 1));
+            text += "Avereage " + aveText(getCellText(i * 2), getCellText(i * 2 + 1)) + avg + "\n" +
+                "Difference " + diffText(getCellText(i * 2), getCellText(i * 2 + 1)) + diffs + "\n";
+            this.resultArray.push(avg)
+            this.resultArray.push(diffs);
+        }
+        return text;
+    }
+
+    function getCell(col) {
+        let table = document.getElementById("data");
+        return table.getElementsByTagName("tr")[row].getElementsByTagName("td")[col]
+    }
+
+    function getCellText(col) {
+        return getCell(col).innerText;
+    }
+
+    function random(max = 10, min = 0) {
+        return Math.floor((Math.random() * max) + min);
+    }
+
+    function tableSetBorder(row, col) {
+        tableClearBorder(this.row, this.col);
+        let table = document.getElementById("data");
+        let trs = table.getElementsByTagName("tr")[row] //.getElementsByTagName("td")[col];
+        trs.style.border = "solid #FF0000";
+        this.row = row;
+        // this.col = col;
+    }
+
+    function tableClearBorder(row, col) {
+        let table = document.getElementById("data");
+        let trs = table.getElementsByTagName("tr")[row] //.getElementsByTagName("td")[col];
+        trs.style.border = "";
+    }
+
+    function createTable(num, max, min) {
+        this.arr = dataX(num, max, min);
+
+        // DRAW HTML TABLE
+        var perrow = arr.length / this.number, // number of elements per row
+            count = 0, // Flag for current cell
+            table = document.getElementById("data"),
+            row = table.insertRow();
+
+        for (var i of arr) {
+            var cell = row.insertCell();
+            cell.innerText = i;
+
+            // Break into next row
+            count++;
+            if (count % perrow == 0) {
+                row = table.insertRow();
+            }
+        }
+
+
+    }
+
+    function createVisualTable(num) {
+        // to create table and sow calucalation
+        // DRAW HTML TABLE
+        let numOfEl = this.arr.length / this.number;
+        var table = document.getElementById("visualSum"),
+            row = table.insertRow();
+        for (let i = 0; i < num; i++) {
+            var cell = row.insertCell();
+            cell.innerText = this.arr[i];
+        }
+        for (var i of arr) {
+            var cell = row.insertCell();
+            cell.innerText = i;
+
+            // Break into next row
+            count++;
+            if (count % perrow == 0) {
+                row = table.insertRow();
+            }
+        }
+
+
+    }
+
+    function dataX(number = 2, max, min) {
+        this.number = number
+        number = Math.pow(2, number)
+        if (number < 2) number = 2
+        let arr = [number]
+        for (let i = 0; i < number / 2; i++) {
+            arr[i * 2] = random(max, min);
+            arr[i * 2 + 1] = random(max, min);
+
+        }
+        return arr;
+    }
+</script>
+
+</html>
+
+<!-- TODO: 
+Automated visual Like Turing -- estimated time 2 hours
+Shadow the choosen dynamically, 
+Draw them with the equation  and show it .
+Calculate and put them back 
+Add inverse 
+-->
